@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="operation"
+            type="com.example.alien.im.fragment.SettingFragment.Operation"/>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        ></FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Text_style"
+        android:background="@drawable/register_click_selector"
+        android:text="退出登录"
+        android:layout_margin="20dp"
+        android:onClick="@{()->operation.logOutClick()}"/>
+
+</LinearLayout>
+</layout>

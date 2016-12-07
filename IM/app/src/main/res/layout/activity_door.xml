@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="presenter"
+            type="com.example.alien.im.main.DoorActivity.Presenter"/>
+    </data>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_door"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alien.im.main.DoorActivity">
+    <fragment
+        android:name="com.example.alien.im.widget.VideoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/register_click_selector"
+        style="@style/Text_style"
+        android:text="@string/str_register"
+        android:onClick="@{()->presenter.onRegisterClick()}"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_click_selector"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        style="@style/Text_style"
+        android:text="@string/str_login"
+        android:onClick="@{()->presenter.onLoginClick()}"/>
+
+</RelativeLayout>
+</layout>

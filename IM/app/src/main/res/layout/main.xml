@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data parent="@">
+        <variable
+            name="presenter"
+            type="com.example.alien.im.main.MainActivity.Presenter"/>
+    </data>
+<LinearLayout
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:onCheckedChanged="@{presenter.onCheckedChanged}">
+        <RadioButton
+            android:id="@+id/talking"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:text="会话"
+            android:gravity="center"
+            android:background="@drawable/radiocheck"
+            />
+        <RadioButton
+            android:id="@+id/people"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:text="联系人"
+            android:gravity="center"
+            android:background="@drawable/radiocheck"
+            />
+        <RadioButton
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:layout_weight="1"
+            android:text="设置"
+            android:gravity="center"
+            android:background="@drawable/radiocheck"
+            />
+    </RadioGroup>
+
+</LinearLayout>
+</layout>

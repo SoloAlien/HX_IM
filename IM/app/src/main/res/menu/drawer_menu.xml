@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="主要模块">
+    <menu>
+        <group>
+            <item
+                android:title="图片"
+                android:icon="@mipmap/ic_launcher"
+                android:id="@+id/pic">
+            </item>
+            <item
+                android:title="聊天"
+                android:icon="@mipmap/ic_launcher"
+                android:id="@+id/talk"
+                ></item>
+        </group>
+    </menu>
+</item>
+</menu>
